@@ -251,7 +251,7 @@ typedef enum {
     if ([[UIDevice currentDevice].systemVersion floatValue] > 8.0) {
         [PHPhotoLibrary requestAuthorization:^(PHAuthorizationStatus status) {
             NSError *error;
-            BOOL granted;
+            BOOL granted = NO;
             if (status == PHAuthorizationStatusAuthorized) {
 //                WQLogMes(@"授权成功");
                 granted = YES;
@@ -342,7 +342,6 @@ typedef enum {
                         }];
     }else {
         ABAddressBookRef addressBook = ABAddressBookCreate();
-        ABAuthorizationStatus authStatus = ABAddressBookGetAuthorizationStatus();
         ABAddressBookRequestAccessWithCompletion(addressBook,
                                                  ^(bool granted,
                                                    CFErrorRef error) {
@@ -616,7 +615,6 @@ typedef enum {
             }
         }
     }else {
-        ABAddressBookRef addressBook = ABAddressBookCreate();
         ABAuthorizationStatus authStatus = ABAddressBookGetAuthorizationStatus();
         switch (authStatus) {
             case kABAuthorizationStatusNotDetermined: {
