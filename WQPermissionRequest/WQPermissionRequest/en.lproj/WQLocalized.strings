@@ -1,0 +1,13 @@
+/* 
+  WQLocalized.strings
+  WQPermissionRequest
+
+  Created by admin on 17/2/14.
+  Copyright © 2017年 jolimark. All rights reserved.
+*/
+
+"Setting" = "Setting";
+"Don't Allow" = "Don't Allow";
+"Forbid permission" = "Forbid permission";
+"Failue authorize" = "Failue authorize";
+"Unsuport authorize" = "Unsuport authorize";

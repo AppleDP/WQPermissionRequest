@@ -1,0 +1,575 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8456B9391E541D90001FC4C8 /* WQLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456B9381E541D90001FC4C8 /* WQLog.m */; };
+		84CF0BD61E5294FE001FF383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0BD51E5294FE001FF383 /* main.m */; };
+		84CF0BD91E5294FE001FF383 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0BD81E5294FE001FF383 /* AppDelegate.m */; };
+		84CF0BDC1E5294FE001FF383 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0BDB1E5294FE001FF383 /* ViewController.m */; };
+		84CF0BDF1E5294FE001FF383 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CF0BDD1E5294FE001FF383 /* Main.storyboard */; };
+		84CF0BE11E5294FE001FF383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84CF0BE01E5294FE001FF383 /* Assets.xcassets */; };
+		84CF0BE41E5294FE001FF383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84CF0BE21E5294FE001FF383 /* LaunchScreen.storyboard */; };
+		84CF0BEF1E5294FE001FF383 /* WQPermissionRequestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0BEE1E5294FE001FF383 /* WQPermissionRequestTests.m */; };
+		84CF0BFA1E5294FE001FF383 /* WQPermissionRequestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0BF91E5294FE001FF383 /* WQPermissionRequestUITests.m */; };
+		84CF0C0A1E52959C001FF383 /* WQPermissionRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0C091E52959C001FF383 /* WQPermissionRequest.m */; };
+		84CF0C111E52EBE2001FF383 /* WQLocalized.strings in Resources */ = {isa = PBXBuildFile; fileRef = 84CF0C131E52EBE2001FF383 /* WQLocalized.strings */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		84CF0BEB1E5294FE001FF383 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84CF0BC91E5294FE001FF383 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84CF0BD01E5294FE001FF383;
+			remoteInfo = WQPermissionRequest;
+		};
+		84CF0BF61E5294FE001FF383 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 84CF0BC91E5294FE001FF383 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 84CF0BD01E5294FE001FF383;
+			remoteInfo = WQPermissionRequest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		8456B9371E541D90001FC4C8 /* WQLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQLog.h; sourceTree = "<group>"; };
+		8456B9381E541D90001FC4C8 /* WQLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQLog.m; sourceTree = "<group>"; };
+		8456B93A1E541DA0001FC4C8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		84CF0BD11E5294FE001FF383 /* WQPermissionRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WQPermissionRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CF0BD51E5294FE001FF383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		84CF0BD71E5294FE001FF383 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		84CF0BD81E5294FE001FF383 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		84CF0BDA1E5294FE001FF383 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		84CF0BDB1E5294FE001FF383 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		84CF0BDE1E5294FE001FF383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		84CF0BE01E5294FE001FF383 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		84CF0BE31E5294FE001FF383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		84CF0BE51E5294FE001FF383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CF0BEA1E5294FE001FF383 /* WQPermissionRequestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WQPermissionRequestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CF0BEE1E5294FE001FF383 /* WQPermissionRequestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQPermissionRequestTests.m; sourceTree = "<group>"; };
+		84CF0BF01E5294FE001FF383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CF0BF51E5294FE001FF383 /* WQPermissionRequestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WQPermissionRequestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		84CF0BF91E5294FE001FF383 /* WQPermissionRequestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WQPermissionRequestUITests.m; sourceTree = "<group>"; };
+		84CF0BFB1E5294FE001FF383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84CF0C081E52959C001FF383 /* WQPermissionRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQPermissionRequest.h; sourceTree = "<group>"; };
+		84CF0C091E52959C001FF383 /* WQPermissionRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQPermissionRequest.m; sourceTree = "<group>"; };
+		84CF0C121E52EBE2001FF383 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/WQLocalized.strings; sourceTree = "<group>"; };
+		84CF0C141E52EBE3001FF383 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/WQLocalized.strings; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		84CF0BCE1E5294FE001FF383 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CF0BE71E5294FE001FF383 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CF0BF21E5294FE001FF383 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8456B9361E541D90001FC4C8 /* WQLog */ = {
+			isa = PBXGroup;
+			children = (
+				8456B9371E541D90001FC4C8 /* WQLog.h */,
+				8456B9381E541D90001FC4C8 /* WQLog.m */,
+			);
+			path = WQLog;
+			sourceTree = "<group>";
+		};
+		84CF0BC81E5294FE001FF383 = {
+			isa = PBXGroup;
+			children = (
+				84CF0BD31E5294FE001FF383 /* WQPermissionRequest */,
+				84CF0BED1E5294FE001FF383 /* WQPermissionRequestTests */,
+				84CF0BF81E5294FE001FF383 /* WQPermissionRequestUITests */,
+				84CF0BD21E5294FE001FF383 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		84CF0BD21E5294FE001FF383 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				84CF0BD11E5294FE001FF383 /* WQPermissionRequest.app */,
+				84CF0BEA1E5294FE001FF383 /* WQPermissionRequestTests.xctest */,
+				84CF0BF51E5294FE001FF383 /* WQPermissionRequestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		84CF0BD31E5294FE001FF383 /* WQPermissionRequest */ = {
+			isa = PBXGroup;
+			children = (
+				8456B93A1E541DA0001FC4C8 /* PrefixHeader.pch */,
+				8456B9361E541D90001FC4C8 /* WQLog */,
+				84CF0C071E52951A001FF383 /* WQPermissionRequest */,
+				84CF0BD71E5294FE001FF383 /* AppDelegate.h */,
+				84CF0BD81E5294FE001FF383 /* AppDelegate.m */,
+				84CF0BDA1E5294FE001FF383 /* ViewController.h */,
+				84CF0BDB1E5294FE001FF383 /* ViewController.m */,
+				84CF0BDD1E5294FE001FF383 /* Main.storyboard */,
+				84CF0BE01E5294FE001FF383 /* Assets.xcassets */,
+				84CF0BE21E5294FE001FF383 /* LaunchScreen.storyboard */,
+				84CF0BE51E5294FE001FF383 /* Info.plist */,
+				84CF0BD41E5294FE001FF383 /* Supporting Files */,
+			);
+			path = WQPermissionRequest;
+			sourceTree = "<group>";
+		};
+		84CF0BD41E5294FE001FF383 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				84CF0BD51E5294FE001FF383 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		84CF0BED1E5294FE001FF383 /* WQPermissionRequestTests */ = {
+			isa = PBXGroup;
+			children = (
+				84CF0BEE1E5294FE001FF383 /* WQPermissionRequestTests.m */,
+				84CF0BF01E5294FE001FF383 /* Info.plist */,
+			);
+			path = WQPermissionRequestTests;
+			sourceTree = "<group>";
+		};
+		84CF0BF81E5294FE001FF383 /* WQPermissionRequestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				84CF0BF91E5294FE001FF383 /* WQPermissionRequestUITests.m */,
+				84CF0BFB1E5294FE001FF383 /* Info.plist */,
+			);
+			path = WQPermissionRequestUITests;
+			sourceTree = "<group>";
+		};
+		84CF0C071E52951A001FF383 /* WQPermissionRequest */ = {
+			isa = PBXGroup;
+			children = (
+				84CF0C081E52959C001FF383 /* WQPermissionRequest.h */,
+				84CF0C091E52959C001FF383 /* WQPermissionRequest.m */,
+				84CF0C131E52EBE2001FF383 /* WQLocalized.strings */,
+			);
+			path = WQPermissionRequest;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		84CF0BD01E5294FE001FF383 /* WQPermissionRequest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CF0BFE1E5294FE001FF383 /* Build configuration list for PBXNativeTarget "WQPermissionRequest" */;
+			buildPhases = (
+				84CF0BCD1E5294FE001FF383 /* Sources */,
+				84CF0BCE1E5294FE001FF383 /* Frameworks */,
+				84CF0BCF1E5294FE001FF383 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WQPermissionRequest;
+			productName = WQPermissionRequest;
+			productReference = 84CF0BD11E5294FE001FF383 /* WQPermissionRequest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		84CF0BE91E5294FE001FF383 /* WQPermissionRequestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CF0C011E5294FE001FF383 /* Build configuration list for PBXNativeTarget "WQPermissionRequestTests" */;
+			buildPhases = (
+				84CF0BE61E5294FE001FF383 /* Sources */,
+				84CF0BE71E5294FE001FF383 /* Frameworks */,
+				84CF0BE81E5294FE001FF383 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84CF0BEC1E5294FE001FF383 /* PBXTargetDependency */,
+			);
+			name = WQPermissionRequestTests;
+			productName = WQPermissionRequestTests;
+			productReference = 84CF0BEA1E5294FE001FF383 /* WQPermissionRequestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		84CF0BF41E5294FE001FF383 /* WQPermissionRequestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 84CF0C041E5294FE001FF383 /* Build configuration list for PBXNativeTarget "WQPermissionRequestUITests" */;
+			buildPhases = (
+				84CF0BF11E5294FE001FF383 /* Sources */,
+				84CF0BF21E5294FE001FF383 /* Frameworks */,
+				84CF0BF31E5294FE001FF383 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				84CF0BF71E5294FE001FF383 /* PBXTargetDependency */,
+			);
+			name = WQPermissionRequestUITests;
+			productName = WQPermissionRequestUITests;
+			productReference = 84CF0BF51E5294FE001FF383 /* WQPermissionRequestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		84CF0BC91E5294FE001FF383 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = jolimark;
+				TargetAttributes = {
+					84CF0BD01E5294FE001FF383 = {
+						CreatedOnToolsVersion = 7.2;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
+					84CF0BE91E5294FE001FF383 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 84CF0BD01E5294FE001FF383;
+					};
+					84CF0BF41E5294FE001FF383 = {
+						CreatedOnToolsVersion = 7.2;
+						TestTargetID = 84CF0BD01E5294FE001FF383;
+					};
+				};
+			};
+			buildConfigurationList = 84CF0BCC1E5294FE001FF383 /* Build configuration list for PBXProject "WQPermissionRequest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 84CF0BC81E5294FE001FF383;
+			productRefGroup = 84CF0BD21E5294FE001FF383 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				84CF0BD01E5294FE001FF383 /* WQPermissionRequest */,
+				84CF0BE91E5294FE001FF383 /* WQPermissionRequestTests */,
+				84CF0BF41E5294FE001FF383 /* WQPermissionRequestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		84CF0BCF1E5294FE001FF383 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CF0BE41E5294FE001FF383 /* LaunchScreen.storyboard in Resources */,
+				84CF0BE11E5294FE001FF383 /* Assets.xcassets in Resources */,
+				84CF0C111E52EBE2001FF383 /* WQLocalized.strings in Resources */,
+				84CF0BDF1E5294FE001FF383 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CF0BE81E5294FE001FF383 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CF0BF31E5294FE001FF383 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		84CF0BCD1E5294FE001FF383 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8456B9391E541D90001FC4C8 /* WQLog.m in Sources */,
+				84CF0BDC1E5294FE001FF383 /* ViewController.m in Sources */,
+				84CF0BD91E5294FE001FF383 /* AppDelegate.m in Sources */,
+				84CF0C0A1E52959C001FF383 /* WQPermissionRequest.m in Sources */,
+				84CF0BD61E5294FE001FF383 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CF0BE61E5294FE001FF383 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CF0BEF1E5294FE001FF383 /* WQPermissionRequestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		84CF0BF11E5294FE001FF383 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				84CF0BFA1E5294FE001FF383 /* WQPermissionRequestUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		84CF0BEC1E5294FE001FF383 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84CF0BD01E5294FE001FF383 /* WQPermissionRequest */;
+			targetProxy = 84CF0BEB1E5294FE001FF383 /* PBXContainerItemProxy */;
+		};
+		84CF0BF71E5294FE001FF383 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 84CF0BD01E5294FE001FF383 /* WQPermissionRequest */;
+			targetProxy = 84CF0BF61E5294FE001FF383 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		84CF0BDD1E5294FE001FF383 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84CF0BDE1E5294FE001FF383 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		84CF0BE21E5294FE001FF383 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84CF0BE31E5294FE001FF383 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		84CF0C131E52EBE2001FF383 /* WQLocalized.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				84CF0C121E52EBE2001FF383 /* Base */,
+				84CF0C141E52EBE3001FF383 /* en */,
+			);
+			name = WQLocalized.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		84CF0BFC1E5294FE001FF383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		84CF0BFD1E5294FE001FF383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		84CF0BFF1E5294FE001FF383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${PROJECT_NAME}/PrefixHeader.pch";
+				INFOPLIST_FILE = WQPermissionRequest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.WQPermissionRequest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		84CF0C001E5294FE001FF383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "${PROJECT_NAME}/PrefixHeader.pch";
+				INFOPLIST_FILE = WQPermissionRequest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.WQPermissionRequest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		84CF0C021E5294FE001FF383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WQPermissionRequestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.WQPermissionRequestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WQPermissionRequest.app/WQPermissionRequest";
+			};
+			name = Debug;
+		};
+		84CF0C031E5294FE001FF383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WQPermissionRequestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.WQPermissionRequestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WQPermissionRequest.app/WQPermissionRequest";
+			};
+			name = Release;
+		};
+		84CF0C051E5294FE001FF383 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WQPermissionRequestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.WQPermissionRequestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WQPermissionRequest;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		84CF0C061E5294FE001FF383 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = WQPermissionRequestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.WQPermissionRequestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = WQPermissionRequest;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		84CF0BCC1E5294FE001FF383 /* Build configuration list for PBXProject "WQPermissionRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CF0BFC1E5294FE001FF383 /* Debug */,
+				84CF0BFD1E5294FE001FF383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84CF0BFE1E5294FE001FF383 /* Build configuration list for PBXNativeTarget "WQPermissionRequest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CF0BFF1E5294FE001FF383 /* Debug */,
+				84CF0C001E5294FE001FF383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84CF0C011E5294FE001FF383 /* Build configuration list for PBXNativeTarget "WQPermissionRequestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CF0C021E5294FE001FF383 /* Debug */,
+				84CF0C031E5294FE001FF383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		84CF0C041E5294FE001FF383 /* Build configuration list for PBXNativeTarget "WQPermissionRequestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84CF0C051E5294FE001FF383 /* Debug */,
+				84CF0C061E5294FE001FF383 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 84CF0BC91E5294FE001FF383 /* Project object */;
+}

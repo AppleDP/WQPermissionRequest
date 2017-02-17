@@ -1,0 +1,14 @@
+//
+//  PrefixHeader.pch
+//  WQPermissionRequest
+//
+//  Created by admin on 17/2/15.
+//  Copyright © 2017年 jolimark. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+#import"WQLog.h"
+
+#endif /* PrefixHeader_pch */
