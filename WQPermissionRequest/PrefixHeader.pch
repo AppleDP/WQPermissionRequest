@@ -9,6 +9,6 @@
 #ifndef PrefixHeader_pch
 #define PrefixHeader_pch
 
-#import"WQLog.h"
+//#import"WQLog.h"
 
 #endif /* PrefixHeader_pch */

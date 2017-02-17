@@ -83,13 +83,13 @@ typedef enum {
             break;
         case WQAuthorizationStatusForbid:
             // 之前请求过，现在禁了权限
-            WQLogInf(@"之前请求过，现在禁了权限");
+//            WQLogInf(@"之前请求过，现在禁了权限");
             self.locationResult = (permission == WQLocationAllows) ||
             (permission == WQLocationWhenInUse) ? result : nil;
             break;
         case WQAuthorizationStatusAuthorized:
             // 已经授权
-            WQLogMes(@"已经授权");
+//            WQLogMes(@"已经授权");
             result(YES, nil);
             return;
             break;
@@ -178,9 +178,9 @@ typedef enum {
                              completionHandler:^(BOOL granted) {
                                  NSError *error;
                                  if (granted) {
-                                     WQLogMes(@"开启成功");
+//                                     WQLogMes(@"开启成功");
                                  }else {
-                                     WQLogErr(@"开启失败");
+//                                     WQLogErr(@"开启失败");
                                      error = [NSError errorWithDomain:WQErrorDomain
                                                                  code:WQFailueAuthorize
                                                              userInfo:@{NSLocalizedDescriptionKey : WQLocalized(@"Failue authorize")}];
@@ -213,12 +213,12 @@ typedef enum {
                           completion:^(BOOL granted,
                                        NSError * _Nullable error) {
                               if (error) {
-                                  WQLogErr(@"error: %@",error);
+//                                  WQLogErr(@"error: %@",error);
                               }else {
                                   if (granted) {
-                                      WQLogMes(@"请求成功");
+//                                      WQLogMes(@"请求成功");
                                   }else {
-                                      WQLogErr(@"请求失败");
+//                                      WQLogErr(@"请求失败");
                                   }
                               }
                               result(granted, error);
@@ -231,12 +231,12 @@ typedef enum {
                           completion:^(BOOL granted,
                                        NSError * _Nullable error) {
                               if (error) {
-                                  WQLogErr(@"error: %@",error);
+//                                  WQLogErr(@"error: %@",error);
                               }else {
                                   if (granted) {
-                                      WQLogMes(@"请求成功");
+//                                      WQLogMes(@"请求成功");
                                   }else {
-                                      WQLogErr(@"请求失败");
+//                                      WQLogErr(@"请求失败");
                                   }
                               }
                               result(granted, error);
@@ -253,10 +253,10 @@ typedef enum {
             NSError *error;
             BOOL granted;
             if (status == PHAuthorizationStatusAuthorized) {
-                WQLogMes(@"授权成功");
+//                WQLogMes(@"授权成功");
                 granted = YES;
             }else {
-                WQLogErr(@"授权失败");
+//                WQLogErr(@"授权失败");
                 error = [NSError errorWithDomain:WQErrorDomain
                                             code:WQFailueAuthorize
                                         userInfo:@{NSLocalizedDescriptionKey : WQLocalized(@"Failue authorize")}];
@@ -271,9 +271,9 @@ typedef enum {
     [session requestRecordPermission:^(BOOL granted) {
         NSError *error;
         if (granted) {
-            WQLogMes(@"请求成功");
+//            WQLogMes(@"请求成功");
         }else {
-            WQLogErr(@"请求失败");
+//            WQLogErr(@"请求失败");
             error = [NSError errorWithDomain:WQErrorDomain
                                         code:WQFailueAuthorize
                                     userInfo:@{NSLocalizedDescriptionKey : WQLocalized(@"Failue authorize")}];
@@ -284,7 +284,7 @@ typedef enum {
 
 - (void)requestHealth:(WQRequestResult)result {
     if (![HKHealthStore isHealthDataAvailable]) {
-        WQLogErr(@"不支持 Health");
+//        WQLogErr(@"不支持 Health");
         NSError *error = [NSError errorWithDomain:WQErrorDomain
                                              code:WQUnsuportAuthorize
                                          userInfo:@{NSLocalizedDescriptionKey : WQLocalized(@"Unsuport authorize")}];
@@ -310,13 +310,13 @@ typedef enum {
                                        completion:^(BOOL success,
                                                     NSError *error) {
                                            if (error) {
-                                               WQLogErr(@"error: %@",error);
+//                                               WQLogErr(@"error: %@",error);
                                            }else {
                                                if(success == YES){
-                                                   WQLogMes(@"请求成功");
+//                                                   WQLogMes(@"请求成功");
                                                }
                                                else{
-                                                   WQLogErr(@"请求失败");
+//                                                   WQLogErr(@"请求失败");
                                                }
                                            }
                                            result(success, error);
@@ -330,12 +330,12 @@ typedef enum {
                         completionHandler:^(BOOL granted,
                                             NSError * _Nullable error) {
                             if (error) {
-                                WQLogErr(@"error: %@",error);
+//                                WQLogErr(@"error: %@",error);
                             }else {
                                 if (granted) {
-                                    WQLogMes(@"请求成功");
+//                                    WQLogMes(@"请求成功");
                                 }else {
-                                    WQLogErr(@"请求失败");
+//                                    WQLogErr(@"请求失败");
                                 }
                             }
                             result(granted, error);
@@ -347,12 +347,12 @@ typedef enum {
                                                  ^(bool granted,
                                                    CFErrorRef error) {
                                                      if (error) {
-                                                         WQLogErr(@"error: %@",error);
+//                                                         WQLogErr(@"error: %@",error);
                                                      }else {
                                                          if (granted) {
-                                                             WQLogMes(@"请求成功");
+//                                                             WQLogMes(@"请求成功");
                                                          }else {
-                                                             WQLogErr(@"请求失败");
+//                                                             WQLogErr(@"请求失败");
                                                          }
                                                      }
                                                      result(granted, (__bridge NSError *)(error));
@@ -640,7 +640,7 @@ typedef enum {
 #pragma mark  -- CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager
 didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
-    WQLogMes(@"didChangeAuthorizationStatus: %d",status);
+//    WQLogMes(@"didChangeAuthorizationStatus: %d",status);
     if (status == kCLAuthorizationStatusAuthorizedAlways
         || status == kCLAuthorizationStatusAuthorizedWhenInUse) {
         if (self.locationResult) {

@@ -37,15 +37,15 @@
                                 requestResult:^(BOOL granted,
                                                 NSError *error) {
                                     if (error) {
-                                        WQLogErr(@"error: %@",error);
+//                                        WQLogErr(@"error: %@",error);
                                     }else {
                                         if (granted) {
-                                            WQLogMes(@"请求成功");
+//                                            WQLogMes(@"请求成功");
                                             dispatch_async(dispatch_get_main_queue(), ^{
                                                 [weakSelf openPhotoLibrary];
                                             });
                                         }else {
-                                            WQLogMes(@"请求失败");
+//                                            WQLogMes(@"请求失败");
                                         }
                                     }
                                 }];
