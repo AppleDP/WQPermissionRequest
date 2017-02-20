@@ -108,7 +108,7 @@ typedef enum {
                                                             }
                                                         });
                                                     }];
-    UIAlertAction *dontAllows = [UIAlertAction actionWithTitle:WQLocalized(@"Don't Allows")
+    UIAlertAction *dontAllows = [UIAlertAction actionWithTitle:WQLocalized(@"Don't Allow")
                                                          style:UIAlertActionStyleDestructive
                                                        handler:^(UIAlertAction * _Nonnull action) {
                                                            NSError *error = [NSError errorWithDomain:WQErrorDomain
@@ -244,7 +244,7 @@ typedef enum {
 }
 
 - (void)requestUserNotification:(WQRequestResult)result {
-    NSAssert(0, @"* * * * * *通知授权还未实现 * * * * * *");
+    NSAssert(0, @"* * * * * * 通知授权还未实现 * * * * * *");
 }
 
 - (void)requestPhotoLibrary:(WQRequestResult)result {
