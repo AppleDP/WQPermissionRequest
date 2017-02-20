@@ -1,5 +1,5 @@
 # WQPermissionRequest
-权限判定及手动请求权限
+### 权限判定及手动请求权限
 # Usage
 ### 支持权限类型
 ```objective-c 
