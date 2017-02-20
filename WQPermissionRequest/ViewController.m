@@ -31,7 +31,7 @@
     }
     __weak typeof(self) weakSelf = self;
     WQPermission permission = WQReminders;
-    [self.permissionRequest requestPermission:permission
+    [self.permissionRequest requestPermission:WQPhotoLibrary
                                         title:@"请求开启相册权限"
                                   description:@"开启相册权限"
                                 requestResult:^(BOOL granted,
