@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8456B9391E541D90001FC4C8 /* WQLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 8456B9381E541D90001FC4C8 /* WQLog.m */; };
+		84832E251E6CFAC900C48F26 /* WQLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 84832E241E6CFAC900C48F26 /* WQLog.m */; };
 		84CF0BD61E5294FE001FF383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0BD51E5294FE001FF383 /* main.m */; };
 		84CF0BD91E5294FE001FF383 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0BD81E5294FE001FF383 /* AppDelegate.m */; };
 		84CF0BDC1E5294FE001FF383 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 84CF0BDB1E5294FE001FF383 /* ViewController.m */; };
@@ -38,9 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		8456B9371E541D90001FC4C8 /* WQLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQLog.h; sourceTree = "<group>"; };
-		8456B9381E541D90001FC4C8 /* WQLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQLog.m; sourceTree = "<group>"; };
 		8456B93A1E541DA0001FC4C8 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		84832E231E6CFAC900C48F26 /* WQLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WQLog.h; sourceTree = "<group>"; };
+		84832E241E6CFAC900C48F26 /* WQLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WQLog.m; sourceTree = "<group>"; };
 		84CF0BD11E5294FE001FF383 /* WQPermissionRequest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WQPermissionRequest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84CF0BD51E5294FE001FF383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		84CF0BD71E5294FE001FF383 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -91,8 +91,8 @@
 		8456B9361E541D90001FC4C8 /* WQLog */ = {
 			isa = PBXGroup;
 			children = (
-				8456B9371E541D90001FC4C8 /* WQLog.h */,
-				8456B9381E541D90001FC4C8 /* WQLog.m */,
+				84832E231E6CFAC900C48F26 /* WQLog.h */,
+				84832E241E6CFAC900C48F26 /* WQLog.m */,
 			);
 			path = WQLog;
 			sourceTree = "<group>";
@@ -308,10 +308,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8456B9391E541D90001FC4C8 /* WQLog.m in Sources */,
 				84CF0BDC1E5294FE001FF383 /* ViewController.m in Sources */,
 				84CF0BD91E5294FE001FF383 /* AppDelegate.m in Sources */,
 				84CF0C0A1E52959C001FF383 /* WQPermissionRequest.m in Sources */,
+				84832E251E6CFAC900C48F26 /* WQLog.m in Sources */,
 				84CF0BD61E5294FE001FF383 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

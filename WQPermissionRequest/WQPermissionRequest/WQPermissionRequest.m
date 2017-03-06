@@ -16,6 +16,7 @@
 #import <CoreLocation/CoreLocation.h>
 #import <AssetsLibrary/AssetsLibrary.h>
 #import <CoreBluetooth/CoreBluetooth.h>
+#import <CoreTelephony/CTCellularData.h>
 
 #import "WQPermissionRequest.h"
 
@@ -83,13 +84,13 @@ typedef enum {
             break;
         case WQAuthorizationStatusForbid:
             // 之前请求过，现在禁了权限
-//            WQLogInf(@"之前请求过，现在禁了权限");
+            WQLogInf(@"之前请求过，现在禁了权限");
             self.locationResult = (permission == WQLocationAllows) ||
             (permission == WQLocationWhenInUse) ? result : nil;
             break;
         case WQAuthorizationStatusAuthorized:
             // 已经授权
-//            WQLogMes(@"已经授权");
+            WQLogMes(@"已经授权");
             result(YES, nil);
             return;
             break;
@@ -170,6 +171,10 @@ typedef enum {
             [self requestContacts:result];
             break;
         }
+        case WQNetwork:{
+            [self requestNetwork:result];
+            break;
+        }
     }
 }
 
@@ -178,9 +183,9 @@ typedef enum {
                              completionHandler:^(BOOL granted) {
                                  NSError *error;
                                  if (granted) {
-//                                     WQLogMes(@"开启成功");
+                                     WQLogMes(@"开启成功");
                                  }else {
-//                                     WQLogErr(@"开启失败");
+                                     WQLogErr(@"开启失败");
                                      error = [NSError errorWithDomain:WQErrorDomain
                                                                  code:WQFailueAuthorize
                                                              userInfo:@{NSLocalizedDescriptionKey : WQLocalized(@"Failue authorize")}];
@@ -213,12 +218,12 @@ typedef enum {
                           completion:^(BOOL granted,
                                        NSError * _Nullable error) {
                               if (error) {
-//                                  WQLogErr(@"error: %@",error);
+                                  WQLogErr(@"error: %@",error);
                               }else {
                                   if (granted) {
-//                                      WQLogMes(@"请求成功");
+                                      WQLogMes(@"请求成功");
                                   }else {
-//                                      WQLogErr(@"请求失败");
+                                      WQLogErr(@"请求失败");
                                   }
                               }
                               result(granted, error);
@@ -231,12 +236,12 @@ typedef enum {
                           completion:^(BOOL granted,
                                        NSError * _Nullable error) {
                               if (error) {
-//                                  WQLogErr(@"error: %@",error);
+                                  WQLogErr(@"error: %@",error);
                               }else {
                                   if (granted) {
-//                                      WQLogMes(@"请求成功");
+                                      WQLogMes(@"请求成功");
                                   }else {
-//                                      WQLogErr(@"请求失败");
+                                      WQLogErr(@"请求失败");
                                   }
                               }
                               result(granted, error);
@@ -244,7 +249,12 @@ typedef enum {
 }
 
 - (void)requestUserNotification:(WQRequestResult)result {
-    NSAssert(0, @"* * * * * * 通知授权还未实现 * * * * * *");
+    UIUserNotificationSettings *setting = [UIUserNotificationSettings settingsForTypes:
+                                           UIUserNotificationTypeSound |
+                                           UIUserNotificationTypeAlert |
+                                           UIUserNotificationTypeBadge
+                                                                            categories:nil];
+    [[UIApplication sharedApplication] registerUserNotificationSettings:setting];
 }
 
 - (void)requestPhotoLibrary:(WQRequestResult)result {
@@ -253,10 +263,10 @@ typedef enum {
             NSError *error;
             BOOL granted = NO;
             if (status == PHAuthorizationStatusAuthorized) {
-//                WQLogMes(@"授权成功");
+                WQLogMes(@"授权成功");
                 granted = YES;
             }else {
-//                WQLogErr(@"授权失败");
+                WQLogErr(@"授权失败");
                 error = [NSError errorWithDomain:WQErrorDomain
                                             code:WQFailueAuthorize
                                         userInfo:@{NSLocalizedDescriptionKey : WQLocalized(@"Failue authorize")}];
@@ -271,9 +281,9 @@ typedef enum {
     [session requestRecordPermission:^(BOOL granted) {
         NSError *error;
         if (granted) {
-//            WQLogMes(@"请求成功");
+            WQLogMes(@"请求成功");
         }else {
-//            WQLogErr(@"请求失败");
+            WQLogErr(@"请求失败");
             error = [NSError errorWithDomain:WQErrorDomain
                                         code:WQFailueAuthorize
                                     userInfo:@{NSLocalizedDescriptionKey : WQLocalized(@"Failue authorize")}];
@@ -284,7 +294,7 @@ typedef enum {
 
 - (void)requestHealth:(WQRequestResult)result {
     if (![HKHealthStore isHealthDataAvailable]) {
-//        WQLogErr(@"不支持 Health");
+        WQLogErr(@"不支持 Health");
         NSError *error = [NSError errorWithDomain:WQErrorDomain
                                              code:WQUnsuportAuthorize
                                          userInfo:@{NSLocalizedDescriptionKey : WQLocalized(@"Unsuport authorize")}];
@@ -310,13 +320,13 @@ typedef enum {
                                        completion:^(BOOL success,
                                                     NSError *error) {
                                            if (error) {
-//                                               WQLogErr(@"error: %@",error);
+                                               WQLogErr(@"error: %@",error);
                                            }else {
                                                if(success == YES){
-//                                                   WQLogMes(@"请求成功");
+                                                   WQLogMes(@"请求成功");
                                                }
                                                else{
-//                                                   WQLogErr(@"请求失败");
+                                                   WQLogErr(@"请求失败");
                                                }
                                            }
                                            result(success, error);
@@ -330,12 +340,12 @@ typedef enum {
                         completionHandler:^(BOOL granted,
                                             NSError * _Nullable error) {
                             if (error) {
-//                                WQLogErr(@"error: %@",error);
+                                WQLogErr(@"error: %@",error);
                             }else {
                                 if (granted) {
-//                                    WQLogMes(@"请求成功");
+                                    WQLogMes(@"请求成功");
                                 }else {
-//                                    WQLogErr(@"请求失败");
+                                    WQLogErr(@"请求失败");
                                 }
                             }
                             result(granted, error);
@@ -346,17 +356,21 @@ typedef enum {
                                                  ^(bool granted,
                                                    CFErrorRef error) {
                                                      if (error) {
-//                                                         WQLogErr(@"error: %@",error);
+                                                         WQLogErr(@"error: %@",error);
                                                      }else {
                                                          if (granted) {
-//                                                             WQLogMes(@"请求成功");
+                                                             WQLogMes(@"请求成功");
                                                          }else {
-//                                                             WQLogErr(@"请求失败");
+                                                             WQLogErr(@"请求失败");
                                                          }
                                                      }
                                                      result(granted, (__bridge NSError *)(error));
                                                  });
     }
+}
+
+- (void)requestNetwork:(WQRequestResult)result {
+    NSAssert(0, @"* * * * * * 网络手动授权还未实现 * * * * * *");
 }
 
 
@@ -394,6 +408,9 @@ typedef enum {
             break;
         case WQContacts:
             authorization = [self determineContacts];
+            break;
+        case WQNetwork:
+            authorization = [self determineNetwork];
             break;
     }
     return authorization;
@@ -634,11 +651,38 @@ typedef enum {
     }
 }
 
+- (WQPermissionAuthorizationStatus)determineNetwork {
+    if ([[[UIDevice currentDevice] systemVersion] floatValue] > 9.0) {
+        CTCellularData *cellularData = [[CTCellularData alloc] init];
+        CTCellularDataRestrictedState authStatus = cellularData.restrictedState;
+        switch (authStatus) {
+            case kCTCellularDataRestrictedStateUnknown: {
+                WQLogMes(@"kCTCellularDataRestrictedStateUnknown");
+                return WQAuthorizationStatusNotDetermined;
+                break;
+            }
+            case kCTCellularDataRestricted: {
+                WQLogMes(@"kCTCellularDataRestricted");
+                return WQAuthorizationStatusForbid;
+                break;
+            }
+            case kCTCellularDataNotRestricted: {
+                WQLogMes(@"kCTCellularDataNotRestricted");
+                return WQAuthorizationStatusAuthorized;
+                break;
+            }
+        }
+    }else {
+        NSAssert(0, @"* * * * * * iOS 9.0 后才可使用网络授权 * * * * * *");
+        return WQAuthorizationStatusForbid;
+    }
+}
+
 
 #pragma mark  -- CLLocationManagerDelegate
 - (void)locationManager:(CLLocationManager *)manager
 didChangeAuthorizationStatus:(CLAuthorizationStatus)status {
-//    WQLogMes(@"didChangeAuthorizationStatus: %d",status);
+    WQLogMes(@"didChangeAuthorizationStatus: %d",status);
     if (status == kCLAuthorizationStatusAuthorizedAlways
         || status == kCLAuthorizationStatusAuthorizedWhenInUse) {
         if (self.locationResult) {

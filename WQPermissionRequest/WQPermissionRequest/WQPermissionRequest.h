@@ -14,6 +14,25 @@
 #define WQREQUESTOBJ [WQPermissionRequest createWQPermissionRequest]
 #define WQErrorDomain @"WQErrorDomain"
 
+#ifndef WQPermissionLogEnable
+#define WQPermissionLogEnable 1
+#endif
+
+#if WQPermissionLogEnable
+/* 
+ 日志输出到控制台须要导入 WQLog.h 日志输出类
+ https://github.com/AppleDP?tab=repositories
+*/
+#import "WQLog.h"
+#else
+#define WQLogDef(FORMAT,...) {}
+#define WQLogInf(FORMAT,...) {}
+#define WQLogErr(FORMAT,...) {}
+#define WQLogWar(FORMAT,...) {}
+#define WQLogMes(FORMAT,...) {}
+#define WQLogOth(FORMAT,...) {}
+#endif
+
 typedef enum {
     WQPhotoLibrary,        // 相册
     WQCamera,              // 相机
@@ -25,6 +44,7 @@ typedef enum {
     WQHealth,              // 健康更新
     WQUserNotification,    // 通知
     WQContacts,            // 通讯录
+    WQNetwork,             // 网络
 }WQPermission;
 
 typedef enum {
