@@ -35,8 +35,29 @@ typedef enum {
 @end
 
 @implementation WQPermissionRequest
-+ (WQPermissionRequest *)createWQPermissionRequest {
-    return [[[self class] alloc] init];
++ (instancetype)allocWithZone:(struct _NSZone *)zone {
+    @synchronized(self) {
+        if (shareRequest == nil) {
+            shareRequest = [super allocWithZone:zone];
+        }
+    }
+    return shareRequest;
+}
+
+static WQPermissionRequest *shareRequest;
++ (WQPermissionRequest *)shareWQPermissionRequest {
+    @synchronized(self) {
+        if (shareRequest == nil) {
+            shareRequest = [[self alloc] init];
+        }
+    }
+    return shareRequest;
+}
+
+- (instancetype)init {
+    if (self = [super init]) {
+    }
+    return self;
 }
 
 - (UIViewController *)currentViewController {
@@ -105,7 +126,8 @@ typedef enum {
                                                         dispatch_async(dispatch_get_main_queue(), ^{
                                                             NSURL * url = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
                                                             if([[UIApplication sharedApplication] canOpenURL:url]) {
-                                                                NSURL*url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];           [[UIApplication sharedApplication] openURL:url];
+                                                                NSURL*url =[NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                                                                [[UIApplication sharedApplication] openURL:url];
                                                             }
                                                         });
                                                     }];

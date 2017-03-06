@@ -11,7 +11,7 @@
 #import <Foundation/Foundation.h>
 
 #define WQLocalized(key) NSLocalizedStringFromTable(key, @"WQLocalized", nil)
-#define WQREQUESTOBJ [WQPermissionRequest createWQPermissionRequest]
+#define SINGLETONREQUEST [WQPermissionRequest shareWQPermissionRequest]
 #define WQErrorDomain @"WQErrorDomain"
 
 #ifndef WQPermissionLogEnable
@@ -56,7 +56,7 @@ typedef enum {
 typedef void(^WQRequestResult)(BOOL granted, NSError *error);
 
 @interface WQPermissionRequest : NSObject
-+ (WQPermissionRequest *)createWQPermissionRequest;
++ (WQPermissionRequest *)shareWQPermissionRequest;
 
 /**
  *  判断权限是否存在
