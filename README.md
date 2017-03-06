@@ -38,3 +38,5 @@ typedef enum {
 ```objective-c
 [self.permissionRequest determinePermission:WQPhotoLibrary];
 ```
+# Pod install
+`pod 'WQPermissionRequest', '~> 1.0.0'`
