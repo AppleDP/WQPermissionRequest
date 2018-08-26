@@ -61,7 +61,6 @@ static WQPermissionRequest *shareRequest;
 }
 
 - (UIViewController *)currentViewController {
-    UIViewController *currentVC = nil;
     UIWindow *window = [[UIApplication sharedApplication] keyWindow];
     if (window.windowLevel != UIWindowLevelNormal) {
         NSArray *windows = [[UIApplication sharedApplication] windows];
@@ -72,14 +71,17 @@ static WQPermissionRequest *shareRequest;
             }
         }
     }
-    UIView *frontV = [[window subviews] objectAtIndex:0];
-    id nextReqoner = [frontV nextResponder];
-    if ([nextReqoner isKindOfClass:[UIViewController class]]) {
-        currentVC = nextReqoner;
-    }else {
-        currentVC = window.rootViewController;
+    UIViewController *result = window.rootViewController;
+    while (result.presentedViewController) {
+        result = result.presentedViewController;
     }
-    return currentVC;
+    if ([result isKindOfClass:[UITabBarController class]]) {
+        result = [(UITabBarController *)result selectedViewController];
+    }
+    if ([result isKindOfClass:[UINavigationController class]]) {
+        result = [(UINavigationController *)result topViewController];
+    }
+    return result;
 }
 
 - (BOOL)determinePermission:(WQPermission)permission {
