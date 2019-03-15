@@ -239,6 +239,7 @@
 				TargetAttributes = {
 					84CF0BD01E5294FE001FF383 = {
 						CreatedOnToolsVersion = 7.2;
+						DevelopmentTeam = 34CX627AKS;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
 								enabled = 1;
@@ -460,11 +461,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 34CX627AKS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${PROJECT_NAME}/PrefixHeader.pch";
 				INFOPLIST_FILE = WQPermissionRequest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.WQPermissionRequest;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.Auxdio.WQPermissionRequest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -473,11 +475,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 34CX627AKS;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "${PROJECT_NAME}/PrefixHeader.pch";
 				INFOPLIST_FILE = WQPermissionRequest/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.jolimark.www.WQPermissionRequest;
+				PRODUCT_BUNDLE_IDENTIFIER = cn.com.Auxdio.WQPermissionRequest;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

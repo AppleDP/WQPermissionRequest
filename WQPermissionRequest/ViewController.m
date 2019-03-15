@@ -20,7 +20,7 @@
 
 - (IBAction)requestClick:(UIButton *)sender {
     __weak typeof(self) weakSelf = self;
-    [SINGLETONREQUEST requestPermission:WQLocationWhenInUse
+    [SINGLETONREQUEST requestPermission:WQMicrophone
                                   title:@"请求开启网络权限"
                             description:@"开启网络权限"
                           requestResult:^(BOOL granted,
